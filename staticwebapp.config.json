@@ -7,7 +7,7 @@
         ]
     },
     "globalHeaders": {
-        "cache-control": "public, max-age=604800, immutable"
+        "cache-control": "public, max-age=31536000, immutable"
     },
     "routes": [
         {
