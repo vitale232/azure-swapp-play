@@ -7,7 +7,7 @@
     },
     "routes": [
         {
-            "route": "/*.html",
+            "route": "/",
             "headers": {
                 "cache-control": "no-store"
             }
