@@ -1,6 +1,10 @@
 {
     "navigationFallback": {
-        "rewrite": "/index.html"
+        "rewrite": "/index.html",
+        "exclude": [
+            "*.{jpg,gif,png}",
+            "assets/*"
+        ]
     },
     "globalHeaders": {
         "cache-control": "max-age=31536000;"
