@@ -1,5 +1,8 @@
 {
     "navigationFallback": {
         "rewrite": "/index.html"
+    },
+    "globalHeaders": {
+        "cache-control": "max-age=60;"
     }
 }
