@@ -3,9 +3,17 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `
-    <h1>{{ greeting }} {{ value }}</h1>
+    <h1>
+      <app-triangles-icon></app-triangles-icon>
+      <span>{{ greeting }} {{ value }}</span>
+      <app-triangles-icon></app-triangles-icon>
+    </h1>
 
-    <app-triangles-icon></app-triangles-icon>
+    <div>Click the icon!</div>
+    <div>
+      Based on Fireship tutorial -
+      <a href="https://github.com/fireship-io/animated-svg-demo">GitHub</a>
+    </div>
 
     <h2>Pick a State to Learn More</h2>
     <nav>
@@ -21,6 +29,12 @@ import { Component } from '@angular/core';
         display: flex;
         justify-content: space-between;
         width: 150px;
+      }
+      app-triangles-icon {
+        margin: -10px 0;
+      }
+      span {
+        margin-left: -50px;
       }
     `,
   ],
