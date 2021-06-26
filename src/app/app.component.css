@@ -1,0 +1,37 @@
+/* Based on Fireship tutorial: https://github.com/fireship-io/animated-svg-demo */
+
+#darkGroup {
+  fill: var(--dark-color);
+}
+
+#lightGroup {
+  fill: var(--light-color);
+}
+
+svg {
+  cursor: pointer;
+}
+
+#light1,
+#dark1,
+#light2 {
+  transition: all 1s ease;
+}
+#light2 {
+  transform: translateX(-100%);
+}
+svg:hover #dark1 {
+  transform: translateX(20%);
+}
+svg:hover #light1 {
+  transform: translateX(40%);
+  opacity: 0;
+}
+svg:hover #light2 {
+  transform: translateX(0%);
+}
+
+figure,
+img {
+  width: 100%;
+}
