@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class ColorsService {
-  private colors: string[] | null = null;
+  public colors: string[] | null = null;
 
   constructor(private http: HttpClient) {
     this.fetchColors();

@@ -24,10 +24,11 @@ export class TrianglesIconComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     this.svg.nativeElement.onclick = () => {
-      this.document.documentElement.style.cssText = `
-        --dark-color: ${this.colorsService.randomColor()};
-        --light-color: ${this.colorsService.randomColor()};
-      `;
+      if (this.colorsService.colors)
+        this.document.documentElement.style.cssText = `
+      --dark-color: ${this.colorsService.randomColor()};
+      --light-color: ${this.colorsService.randomColor()};
+    `;
     };
   }
 }
