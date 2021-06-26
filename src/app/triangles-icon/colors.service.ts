@@ -23,6 +23,9 @@ export class ColorsService {
 
   constructor() {
     setTimeout(() => (this.colors = colors), 1000);
+    fetch('api/colors')
+      .then((res) => res.json())
+      .then((data) => console.log({ data }));
   }
 
   public randomColor(): string {
