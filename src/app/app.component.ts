@@ -21,6 +21,11 @@ const colors = [
   'coral',
   'darkgoldenrod',
 ];
+
+function rando(): string {
+  return colors[Math.floor(Math.random() * colors.length)];
+}
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -37,7 +42,6 @@ export class AppComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     this.svg.nativeElement.onclick = () => {
-      const rando = () => colors[Math.floor(Math.random() * colors.length)];
       this.document.documentElement.style.cssText = `
         --dark-color: ${rando()};
         --light-color: ${rando()};
