@@ -1,51 +1,31 @@
-import { DOCUMENT } from '@angular/common';
-import {
-  AfterViewInit,
-  Component,
-  ElementRef,
-  Inject,
-  ViewChild,
-} from '@angular/core';
-
-const colors = [
-  'darkred',
-  'darkblue',
-  'green',
-  'orange',
-  'hotpink',
-  'purple',
-  'darkslategray',
-  'darksalmon',
-  'dodgerblue',
-  'lightskyblue',
-  'coral',
-  'darkgoldenrod',
-];
-
-function rando(): string {
-  return colors[Math.floor(Math.random() * colors.length)];
-}
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  template: `<h1>{{ greeting }} {{ value }}</h1>
+
+    <app-triangles-icon></app-triangles-icon>
+
+    <h2>Vacationland, USA</h2>
+
+    <p>
+      The US state of Maine is a beautiful place with a diverse landscape and
+      culture. The license plate makes the claim "Vacationland", and it's hard
+      to disagree!
+    </p>
+    <figure>
+      <img
+        src="assets/five-island.jpg"
+        alt="Landscape photograph of Five Island, Maine from the shore of Georgetown Island"
+        width="600"
+      />
+      <figcaption>
+        A Landscape photograph of Five Island, Maine from the shore of
+        Georgetown Island
+      </figcaption>
+    </figure> `,
 })
-export class AppComponent implements AfterViewInit {
+export class AppComponent {
   greeting = 'Hola';
   value = 'Mundo';
-
-  @ViewChild('triangles', { static: true })
-  private svg!: ElementRef<SVGElement>;
-
-  constructor(@Inject(DOCUMENT) private document: Document) {}
-
-  ngAfterViewInit(): void {
-    this.svg.nativeElement.onclick = () => {
-      this.document.documentElement.style.cssText = `
-        --dark-color: ${rando()};
-        --light-color: ${rando()};
-      `;
-    };
-  }
 }
