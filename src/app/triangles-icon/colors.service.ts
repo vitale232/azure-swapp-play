@@ -1,19 +1,5 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-
-const colors = [
-  'darkred',
-  'darkblue',
-  'green',
-  'orange',
-  'hotpink',
-  'purple',
-  'darkslategray',
-  'darksalmon',
-  'dodgerblue',
-  'lightskyblue',
-  'coral',
-  'darkgoldenrod',
-];
 
 @Injectable({
   providedIn: 'root',
@@ -21,14 +7,18 @@ const colors = [
 export class ColorsService {
   private colors: string[] | null = null;
 
-  constructor() {
-    setTimeout(() => (this.colors = colors), 1000);
-    fetch('api/colors')
-      .then((res) => res.json())
-      .then((data) => console.log({ data }));
+  constructor(private http: HttpClient) {
+    this.fetchColors();
+  }
+
+  public fetchColors(): void {
+    this.http.get<string[]>('/api/colors').subscribe({
+      next: (response) => (this.colors = response),
+      error: console.error,
+    });
   }
 
   public randomColor(): string {
-    return this.colors[Math.floor(Math.random() * colors.length)];
+    return this.colors[Math.floor(Math.random() * this.colors.length)];
   }
 }
