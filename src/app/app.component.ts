@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  template: `<h1>{{ greeting }} {{ value }}</h1>
+  template: `
+    <h1>{{ greeting }} {{ value }}</h1>
 
     <app-triangles-icon></app-triangles-icon>
 
@@ -17,13 +18,22 @@ import { Component } from '@angular/core';
       <img
         src="assets/five-island.jpg"
         alt="Landscape photograph of Five Island, Maine from the shore of Georgetown Island"
-        width="600"
       />
       <figcaption>
         A Landscape photograph of Five Island, Maine from the shore of
         Georgetown Island
       </figcaption>
-    </figure> `,
+    </figure>
+  `,
+  styles: [
+    `
+      figure,
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    `,
+  ],
 })
 export class AppComponent {
   greeting = 'Hola';
