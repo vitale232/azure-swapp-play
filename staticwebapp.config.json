@@ -4,5 +4,13 @@
     },
     "globalHeaders": {
         "cache-control": "max-age=60;"
-    }
+    },
+    "routes": [
+        {
+            "route": "/*.html",
+            "headers": {
+                "cache-control": "no-store"
+            }
+        }
+    ]
 }
