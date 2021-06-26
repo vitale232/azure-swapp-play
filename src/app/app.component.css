@@ -30,3 +30,8 @@ svg:hover #light1 {
 svg:hover #light2 {
   transform: translateX(0%);
 }
+
+figure,
+img {
+  width: 100%;
+}
