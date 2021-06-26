@@ -7,30 +7,20 @@ import { Component } from '@angular/core';
 
     <app-triangles-icon></app-triangles-icon>
 
-    <h2>Vacationland, USA</h2>
+    <h4>Pick a State to Learn More</h4>
+    <nav>
+      <a routerLink="maine">Maine</a>
+      <a routerLink="new-york">New York</a>
+    </nav>
 
-    <p>
-      The US state of Maine is a beautiful place with a diverse landscape and
-      culture. The license plate makes the claim "Vacationland", and it's hard
-      to disagree!
-    </p>
-    <figure>
-      <img
-        src="assets/five-island.jpg"
-        alt="Landscape photograph of Five Island, Maine from the shore of Georgetown Island"
-      />
-      <figcaption>
-        A Landscape photograph of Five Island, Maine from the shore of
-        Georgetown Island
-      </figcaption>
-    </figure>
+    <router-outlet></router-outlet>
   `,
   styles: [
     `
-      figure,
-      img {
-        max-width: 100%;
-        height: auto;
+      nav {
+        display: flex;
+        justify-content: space-between;
+        width: 150px;
       }
     `,
   ],
