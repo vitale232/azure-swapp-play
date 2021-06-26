@@ -2,28 +2,42 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  template: `<h1>{{ greeting }} {{ value }}</h1>
+  template: `
+    <h1>
+      <app-triangles-icon></app-triangles-icon>
+      <span>{{ greeting }} {{ value }}</span>
+      <app-triangles-icon></app-triangles-icon>
+    </h1>
 
-    <app-triangles-icon></app-triangles-icon>
+    <div>Click the icon!</div>
+    <div>
+      Based on Fireship tutorial -
+      <a href="https://github.com/fireship-io/animated-svg-demo">GitHub</a>
+    </div>
 
-    <h2>Vacationland, USA</h2>
+    <h2>Pick a State to Learn More</h2>
+    <nav>
+      <a routerLink="maine">Maine</a>
+      <a routerLink="new-york">New York</a>
+    </nav>
 
-    <p>
-      The US state of Maine is a beautiful place with a diverse landscape and
-      culture. The license plate makes the claim "Vacationland", and it's hard
-      to disagree!
-    </p>
-    <figure>
-      <img
-        src="assets/five-island.jpg"
-        alt="Landscape photograph of Five Island, Maine from the shore of Georgetown Island"
-        width="600"
-      />
-      <figcaption>
-        A Landscape photograph of Five Island, Maine from the shore of
-        Georgetown Island
-      </figcaption>
-    </figure> `,
+    <router-outlet></router-outlet>
+  `,
+  styles: [
+    `
+      nav {
+        display: flex;
+        justify-content: space-between;
+        width: 150px;
+      }
+      app-triangles-icon {
+        margin: -10px 0;
+      }
+      span {
+        margin-left: -50px;
+      }
+    `,
+  ],
 })
 export class AppComponent {
   greeting = 'Hola';

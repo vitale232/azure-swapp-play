@@ -1,5 +1,15 @@
 /* Based on Fireship tutorial: https://github.com/fireship-io/animated-svg-demo */
 
+:host {
+  display: inline;
+}
+
+svg {
+  display: inline;
+  margin: -25px 0;
+  margin-right: -10px;
+}
+
 #darkGroup {
   fill: var(--dark-color);
 }
@@ -29,9 +39,4 @@ svg:hover #light1 {
 }
 svg:hover #light2 {
   transform: translateX(0%);
-}
-
-figure,
-img {
-  width: 100%;
 }

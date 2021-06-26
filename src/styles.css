@@ -8,3 +8,9 @@ body {
   --dark-color: #543d95;
   --light-color: #47ccac;
 }
+
+@media only screen and (max-width: 600px) {
+  body {
+    margin: 1em 9%;
+  }
+}
