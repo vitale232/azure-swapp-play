@@ -1,5 +1,15 @@
 {
     "staticWebApps.appSubpath": "/",
     "staticWebApps.apiSubpath": "api",
-    "staticWebApps.outputSubpath": "dist/angular-basic"
+    "staticWebApps.outputSubpath": "dist/angular-basic",
+    "cSpell.words": [
+        "darkred",
+        "darksalmon",
+        "darkslategray",
+        "dodgerblue",
+        "hola",
+        "hotpink",
+        "mundo",
+        "rando"
+    ]
 }
