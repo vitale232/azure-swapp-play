@@ -17,6 +17,9 @@ const colors = [
   'darkslategray',
   'darksalmon',
   'dodgerblue',
+  'lightskyblue',
+  'coral',
+  'darkgoldenrod',
 ];
 @Component({
   selector: 'app-root',

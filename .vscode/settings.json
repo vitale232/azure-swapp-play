@@ -3,12 +3,14 @@
     "staticWebApps.apiSubpath": "api",
     "staticWebApps.outputSubpath": "dist/angular-basic",
     "cSpell.words": [
+        "darkgoldenrod",
         "darkred",
         "darksalmon",
         "darkslategray",
         "dodgerblue",
         "hola",
         "hotpink",
+        "lightskyblue",
         "mundo",
         "rando"
     ]
