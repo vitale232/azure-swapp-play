@@ -6,9 +6,9 @@ import { Component } from '@angular/core';
     <h2>Empire State, USA</h2>
 
     <p>
-      The US state of New York is stupendous place! While it's best known for
-      New York City, it's home to numerous mountain ranges, wildlife, and
-      cultural delights
+      The US state of New York is a stupendous place! While it's best known for
+      New York City (aka the Big Apple 🍏), it's home to numerous mountain
+      ranges, wildlife, and cultural delights!
     </p>
     <figure>
       <img
