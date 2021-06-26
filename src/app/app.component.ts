@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 
     <app-triangles-icon></app-triangles-icon>
 
-    <h4>Pick a State to Learn More</h4>
+    <h2>Pick a State to Learn More</h2>
     <nav>
       <a routerLink="maine">Maine</a>
       <a routerLink="new-york">New York</a>
