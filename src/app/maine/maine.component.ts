@@ -17,7 +17,7 @@ import { Component } from '@angular/core';
       />
       <figcaption>
         A landscape photograph of Five Island, Maine from the shore of
-        Georgetown Island
+        Georgetown Island.
       </figcaption>
     </figure>
   `,

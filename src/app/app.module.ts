@@ -7,6 +7,11 @@ import { TrianglesIconComponent } from './triangles-icon/triangles-icon.componen
 
 const routes: Routes = [
   {
+    path: 'florida',
+    loadChildren: () =>
+      import('./florida/florida.module').then((m) => m.FloridaModule),
+  },
+  {
     path: 'maine',
     loadChildren: () =>
       import('./maine/maine.module').then((m) => m.MaineModule),

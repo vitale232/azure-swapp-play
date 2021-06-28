@@ -17,6 +17,7 @@ import { Component } from '@angular/core';
 
     <h2>Pick a State to Learn More</h2>
     <nav>
+      <a routerLink="florida">Florida</a>
       <a routerLink="maine">Maine</a>
       <a routerLink="new-york">New York</a>
     </nav>
@@ -28,7 +29,7 @@ import { Component } from '@angular/core';
       nav {
         display: flex;
         justify-content: space-between;
-        width: 150px;
+        width: 250px;
       }
       app-triangles-icon {
         margin: -10px 0;
